@@ -1,0 +1,24 @@
+<form action="/cards/<%= @card.id %>" method="post">
+    <input type="hidden" name="_method" value="patch" />
+    <label for="player_name">Player Name </label>
+    <input type="text" name="card[player_name]" id="player_name" value="<%= @card.player_name%>"/>
+    <br />
+    <br />
+    <label for="team">Team</label>
+    <input type="text" name="card[team]" id="team" value="<%= @card.team %>"/>
+    <br />
+    <br />
+    <label for="number">Number</label>
+    <input type="text" name="card[number]" id="number" value="<%= @card.number %>"/>
+    <br />
+    <br />
+    <label for="year">Year</label>
+    <input type="text" name="card[year]" id="year" value="<%= @card.year%>"/>
+    <br />
+    <br />
+    <label for="condition">Condition</label>
+    <input type="text" name="card[condition]" id="condition" value="<%= @card.condition %>"/>
+    <br />
+    <br />
+    <input type="submit" name="submit" value="Submit" />
+</form>

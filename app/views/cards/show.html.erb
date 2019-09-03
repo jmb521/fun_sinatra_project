@@ -1,0 +1,16 @@
+<p><%= @card.player_name %></p>
+<p><%= @card.team %></p>
+<p><%= @card.number %></p>
+<% if @card.year %>
+<p><%= @card.year %></p>
+<% else %>
+<p>Unknown </p>
+<% end %>
+<p><%= @card.condition %></p>
+
+<a href="/cards/<%= @card.id %>/edit">Edit</a>
+<form action="/cards/<%= @card.id %>/delete" method="post">
+<input type="hidden" name="_method" value="delete" />
+<input type="submit" value="Delete" />
+</form>
+

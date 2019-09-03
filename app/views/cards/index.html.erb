@@ -1,0 +1,25 @@
+<div class="cards">
+<% @cards.each do |card| %>
+        <a href="/cards/<%= card.id %>">
+                <div class="card">
+                        <h3><%= card.player_name%></h3>
+                        
+                        <span class="card-details">
+                        <%= card.team %>
+                        <br />
+                        <%= card.number %>
+                        <br />
+                        <% if !card.condition %>
+                        Unknown condition
+                        <% else %>
+                        <%= card.condition %>
+                        <% end %>
+                        <br />
+                        
+                        <%= card.year %>
+                        </span>
+                </div>
+        </a>
+<% end %>
+</div> 
+
